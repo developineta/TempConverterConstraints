@@ -76,6 +76,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8et-UA-r5W"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="388" id="l1t-6O-oyC"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="277" id="xWN-uW-Z3m"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -83,44 +85,45 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-eU-P51">
-                                <rect key="frame" x="0.0" y="802" width="428" height="42"/>
-                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="6fY-Pu-TQB"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="8bH-UZ-dHW"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Fahrenheit"/>
-                                    <segment title="Kelvin"/>
-                                </segments>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8bH-UZ-dHW"/>
-                                    </mask>
-                                </variation>
-                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-lR-fCu">
+                                <rect key="frame" x="0.0" y="802" width="428" height="41"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-eU-P51">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="42"/>
+                                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="6fY-Pu-TQB"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="8bH-UZ-dHW"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Fahrenheit"/>
+                                            <segment title="Kelvin"/>
+                                        </segments>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8bH-UZ-dHW"/>
+                                            </mask>
+                                        </variation>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="trailing" secondItem="JCu-7c-IDB" secondAttribute="trailing" id="2EB-WP-ziy"/>
                             <constraint firstItem="JCu-7c-IDB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3mv-vM-7L8"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="leading" secondItem="JCu-7c-IDB" secondAttribute="leading" id="71H-4w-Hkt"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="API-mS-u9n"/>
                             <constraint firstItem="orf-gM-f2s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="B0m-nA-C2c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCu-7c-IDB" secondAttribute="bottom" constant="-97" id="CY4-6r-yXf"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="E9f-cr-JK8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ICq-lR-fCu" secondAttribute="trailing" id="FIC-40-ejB"/>
+                            <constraint firstItem="ICq-lR-fCu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hx2-rN-DO1"/>
                             <constraint firstItem="orf-gM-f2s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kgo-bB-MIr"/>
                             <constraint firstItem="orf-gM-f2s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qm4-nB-f6Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCu-7c-IDB" secondAttribute="trailing" id="VEP-qS-4fO"/>
                             <constraint firstItem="JCu-7c-IDB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iqI-S0-bYa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="orf-gM-f2s" secondAttribute="trailing" id="onX-YW-71a"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="or6-mI-wfx"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="top" relation="lessThanOrEqual" secondItem="orf-gM-f2s" secondAttribute="bottom" constant="373" id="rJl-Wm-e1j"/>
-                            <constraint firstItem="uxA-eU-P51" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yB5-C1-IkV"/>
+                            <constraint firstItem="ICq-lR-fCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sjT-C1-2ZD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
